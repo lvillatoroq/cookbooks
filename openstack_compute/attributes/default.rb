@@ -4,6 +4,7 @@ default['openstack']['compute']['hostname'] = 'compute1'
 default['openstack']['compute']['mgmtinterface'] = 'eth1'
 default['openstack']['compute']['mgmtip'] = '192.168.88.201'
 default['openstack']['compute']['mgmtmask'] = '255.255.255.0'
+default['openstack']['compute']['gateway'] = '192.168.88.1'
 default['openstack']['compute']['publicinterface'] = 'eth2'
 default['openstack']['internet'] = 'eth4'
 default['apt']['unattended_upgrades']['enable'] = true
