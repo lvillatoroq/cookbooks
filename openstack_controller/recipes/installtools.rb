@@ -11,7 +11,7 @@ end
 
 #Install the mysql services 
 
-=begin
+
 template "/etc/mysql/conf.d/mysqld_openstack.cnf" do
 	source "mysqld_openstack.cnf.erb"
 	owner "root"
@@ -22,7 +22,7 @@ end
 service 'mysql' do 
   action :restart
 end
-=end
+
 
 execute 'addusrabbit' do
   command 'rabbitmqctl add_user openstack openstack'
