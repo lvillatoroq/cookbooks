@@ -112,6 +112,13 @@ end
 cookbook_file "id_rsa" do
 	path "/var/lib/nova/.ssh/id_rsa"
 	action :create
+	mode 0600
+end
+
+cookbook_file "id_rsa2" do
+	path "/home/#{node['systemuser']}/.ssh/id_rsa"
+	action :create
+	mode 0600
 end
 
 cookbook_file "config" do
