@@ -5,6 +5,8 @@ auto <%= node['openstack']['controller']['mgmtinterface'] %>
 iface <%= node['openstack']['controller']['mgmtinterface'] %> inet static
 address <%= node['openstack']['controller']['mgmtip'] %>
 netmask <%= node['openstack']['controller']['mgmtmask'] %>
+gateway <%= node['openstack']['controller']['gateway'] %>
+dns-nameservers 8.8.8.8 
 
 auto <%= node['openstack']['controller']['publicinterface'] %>
 iface <%= node['openstack']['controller']['publicinterface'] %> inet manual
