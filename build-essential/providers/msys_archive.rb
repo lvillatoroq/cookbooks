@@ -90,6 +90,13 @@ def cache_path
 end
 
 def tar_name
-  ::File.basename(archive_name, :Ã§îs¼Ú$û¤¼„›¶‰0™+Õ  çÇõmxÒ]bFVM
-¸ßÍgêUpÀÛïä³ôŠ8˜íUr@ÚOäËô¨¸M_ŠGXÍejTĞÀ£ïÆ3í*2`êWğÁ{ïœ³Ö
-!8ç­uBXÎEkŒĞš#Ôæ µ'ÈåitÑ£µFÍ9jmÒsâZ6Dé±:¬ø‚=^nG“RBtÎX«…@œÏÖ+á ·§ÉEiÑ:#
+  ::File.basename(archive_name, ::File.extname(archive_name))
+end
+
+def tar_path
+  ::File.join(cache_dir, tar_name)
+end
+
+def extract_cmd(source_file, dest_dir)
+  "7z x #{source_file} -o#{dest_dir} -r -y"
+end
