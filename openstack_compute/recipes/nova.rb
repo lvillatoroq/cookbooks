@@ -115,7 +115,7 @@ cookbook_file "id_rsa" do
 	mode 0600
 end
 
-cookbook_file "id_rsa2" do
+cookbook_file "id_rsa" do
 	path "/home/#{node['systemuser']}/.ssh/id_rsa"
 	action :create
 	mode 0600
