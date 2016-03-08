@@ -117,8 +117,10 @@ end
 
 cookbook_file "id_rsa" do
 	path "/home/#{node['systemuser']}/.ssh/id_rsa"
-	action :create
+	owner "#{node['systemuser']}"
+	group "#{node['systemuser']}"
 	mode 0600
+	action :create
 end
 
 cookbook_file "config" do
