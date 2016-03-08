@@ -1,0 +1,15 @@
+auto lo
+iface lo inet loopback
+
+auto <%= node['openstack']['compute']['mgmtinterface'] %>
+iface <%= node['openstack']['compute']['mgmtinterface'] %> inet static
+address <%= node['openstack']['compute']['mgmtip'] %>
+netmask <%= node['openstack']['compute']['mgmtmask'] %>
+
+auto <%= node['openstack']['compute']['publicinterface'] %>
+iface <%= node['openstack']['compute']['publicinterface'] %> inet manual
+up ip link set dev $IFACE up
+down ip link set dev $IFACE down
+
+auto eth4
+iface eth4 inet dhcp

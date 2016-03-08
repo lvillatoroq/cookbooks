@@ -1,0 +1,11 @@
+DEPENDENCIES
+  openstack_compute
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.9.2)
+  openstack_compute (0.1.0)
+    apt (~> 2.9.2)
+    patch (~> 2.1.0)
+  patch (2.1.0)

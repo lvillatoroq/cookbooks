@@ -1,0 +1,1 @@
+/var/lib/nova/instances *(rw,sync,fsid=0,no_subtree_check,no_root_squash)

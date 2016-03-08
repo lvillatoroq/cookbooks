@@ -1,0 +1,10 @@
+name 'openstack_compute'
+maintainer 'Luis Villatoro'
+maintainer_email 'lvillatoroq@gmail.com'
+license 'all_rights'
+description 'Installs/Configures openstack_compute'
+long_description 'Installs/Configures openstack_compute'
+version '0.1.0'
+
+depends 'apt', '~> 2.9.2'
+depends 'patch', '~> 2.1.0'
