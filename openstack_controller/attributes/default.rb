@@ -4,6 +4,7 @@ default['openstack']['controller']['hostname'] = 'controller'
 default['openstack']['controller']['mgmtinterface'] = 'eth1'
 default['openstack']['controller']['mgmtip'] = '192.168.88.200'
 default['openstack']['controller']['mgmtmask'] = '255.255.255.0'
+default['openstack']['controller']['gateway'] = '192.168.88.1'
 default['openstack']['controller']['publicinterface'] = 'eth2'
 default['openstack']['internet'] = 'eth4'
 default['apt']['unattended_upgrades']['enable'] = true
