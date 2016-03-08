@@ -134,3 +134,7 @@ template "/var/lib/nova/.ssh/authorized_keys" do
 	group "nova"
 	mode 0600
 end
+
+execute 'ufwoff' do
+	command 'ufw disable'
+end
