@@ -123,6 +123,13 @@ cookbook_file "id_rsa" do
 	mode 0600
 end
 
+directory "/home/#{node['systemuser']}/.ssh" do
+  owner "#{node['systemuser']}"
+  group "#{node['systemuser']}"
+  mode '0700'
+  action :create
+end
+
 cookbook_file "id_rsa" do
 	path "/home/#{node['systemuser']}/.ssh/id_rsa"
 	owner "#{node['systemuser']}"
