@@ -77,6 +77,14 @@ cookbook_file "libvirt-bin" do
 	action :create
 end
 
+service 'libvirt-bin' do
+	action :restart
+end
+
+service 'nova-compute' do
+	action :restart
+end
+
 directory '/var/lib/nova/.ssh' do
   owner 'nova'
   group 'nova'
